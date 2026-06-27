@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dataset de contactos publicos - Terremoto Venezuela</title>
+    <meta
+      name="description"
+      content="Dataset publico de contactos organizacionales y canales de difusion para apoyar una app de ayuda tras el terremoto de Venezuela."
+    />
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #202124;
+        --muted: #5f6368;
+        --line: #d7dadf;
+        --surface: #ffffff;
+        --bg: #f6f7f9;
+        --accent: #0b57d0;
+        --accent-dark: #0842a0;
+        --ok: #137333;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", sans-serif;
+        background: var(--bg);
+        color: var(--ink);
+        line-height: 1.5;
+      }
+
+      main {
+        max-width: 920px;
+        margin: 0 auto;
+        padding: 56px 20px 72px;
+      }
+
+      header {
+        border-bottom: 1px solid var(--line);
+        padding-bottom: 28px;
+      }
+
+      h1 {
+        margin: 0 0 14px;
+        font-size: clamp(2rem, 5vw, 4rem);
+        line-height: 1;
+        letter-spacing: 0;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      .lede {
+        max-width: 760px;
+        color: var(--muted);
+        font-size: 1.08rem;
+      }
+
+      .downloads {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 16px;
+        margin-top: 32px;
+      }
+
+      .download {
+        display: flex;
+        min-height: 178px;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 22px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--surface);
+        padding: 20px;
+      }
+
+      .download h2 {
+        margin: 0 0 8px;
+        font-size: 1.16rem;
+        letter-spacing: 0;
+      }
+
+      .download p {
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      a.button {
+        display: inline-flex;
+        width: fit-content;
+        align-items: center;
+        justify-content: center;
+        border-radius: 6px;
+        background: var(--accent);
+        color: #ffffff;
+        font-weight: 700;
+        padding: 10px 14px;
+        text-decoration: none;
+      }
+
+      a.button:hover {
+        background: var(--accent-dark);
+      }
+
+      section {
+        margin-top: 36px;
+      }
+
+      h2 {
+        margin: 0 0 12px;
+        font-size: 1.3rem;
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 1.2rem;
+        color: var(--muted);
+      }
+
+      li + li {
+        margin-top: 8px;
+      }
+
+      .note {
+        border-left: 4px solid var(--ok);
+        background: #eef7f0;
+        padding: 16px 18px;
+        color: #174a25;
+      }
+
+      footer {
+        margin-top: 44px;
+        border-top: 1px solid var(--line);
+        padding-top: 18px;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Dataset publico para contactar aliados</h1>
+        <p class="lede">
+          Contactos organizacionales, medios, aliados tecnicos y canales de
+          difusion para apoyar una app de ayuda tras el terremoto de Venezuela.
+        </p>
+      </header>
+
+      <section class="downloads" aria-label="Descargas">
+        <article class="download">
+          <div>
+            <h2>Dataset de contactos priorizados</h2>
+            <p>
+              CSV operativo con fuentes cruzadas, canal publico, LinkedIn cuando
+              aplica, puntaje de confianza, riesgo y siguiente accion.
+            </p>
+          </div>
+          <a
+            class="button"
+            href="./data/venezuela-earthquake-contact-dataset.csv"
+            download
+            >Descargar CSV</a
+          >
+        </article>
+
+        <article class="download">
+          <div>
+            <h2>Dataset de difusion e influencers</h2>
+            <p>
+              CSV complementario para amplificacion: medios, creadores, hubs de
+              diaspora, organizaciones y negocios comunitarios.
+            </p>
+          </div>
+          <a
+            class="button"
+            href="./data/venezuela-earthquake-influencer-dataset.csv"
+            download
+            >Descargar CSV</a
+          >
+        </article>
+      </section>
+
+      <section>
+        <h2>Uso recomendado</h2>
+        <ul>
+          <li>Primero contactar verificadores y organizaciones humanitarias.</li>
+          <li>Despues activar medios de confianza con un kit de fuentes.</li>
+          <li>Usar creadores de alto alcance solo despues de validacion publica.</li>
+        </ul>
+      </section>
+
+      <section class="note">
+        Este dataset no debe usarse como people-finder. No contiene cedulas,
+        RIFs personales, direcciones privadas ni datos sensibles. Cedula.com.ve
+        se trata solo como posible contacto tecnico/API, no como fuente para
+        identificar o contactar ciudadanos.
+      </section>
+
+      <footer>
+        Ultima actualizacion: 2026-06-26. Verificar manualmente los canales
+        marcados como manual_verify antes de contactar.
+      </footer>
+    </main>
+  </body>
+</html>
